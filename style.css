@@ -63,7 +63,7 @@ padding: 35px 0;
   height: 750px;
   padding-top: 100px;
   background-color: #FF00FF;
-  background: url('/topfon.jpg');
+  background: url('./topfon.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

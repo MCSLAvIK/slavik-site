@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -10,7 +11,29 @@
   border: solid 2px #36393f;
 }
 
-
+@media screen and (max-width: 890px) {
+  .nav__link{
+    font-size: 15px !important;
+  }
+  .topchik__title {
+    font-size: 40px !important;
+  }
+}
+@media screen and (max-width: 750px){
+  .nav__link {
+    font-size: 12px !important;
+  }
+  .himg {
+    width: 75px !important;
+    height: 35px !important;
+    border-radius: 2px !important;
+  }
+}
+.himg {
+  width: 150px;
+  height: 70px;
+  border-radius: 5px;
+}
 body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
@@ -18,14 +41,29 @@ body {
   color: #6c7279;
   -webkit-font-smoothing: antialiased;
 }
-
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: brightness(0.3);
+  filter: brightness(0.3);
+  background-image: url('./topfon.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /* HEADER */
 .header {
-position: absolute;
-background-color: rgba(0,0,0,0.3);
-width: 100%;
-height: 100px;
-border-bottom: 1px solid #515369;
+  position: absolute;
+  background-color: rgba(0,0,0,0.3);
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #515369;
+}
+#page {
+  position: absolute;
+  margin-top: 100px;
+  width: 100%;
+  height: 100%;
 }
 /* CONTAINER */
 .container {
@@ -40,6 +78,7 @@ border-bottom: 1px solid #515369;
   height: 100px;
   align-items: center;
 }
+/* NAVIGATION */
 .nav {
   font-size: 20px;
   font-weight: 700;
@@ -47,10 +86,10 @@ border-bottom: 1px solid #515369;
 }
 .nav__link {
   margin-left: 35px;
+  opacity: 0.75;
   color: #fff;
   text-decoration: none;
-  opacity: 0.75;
-  transition: opacity 0.1s linear;
+  transition-duration: .2s;
 }
 .nav__link:hover {
   opacity: 1;
@@ -60,21 +99,113 @@ border-bottom: 1px solid #515369;
 .topchik {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 750px;
   padding-top: 100px;
+  align-items: center;
+  height: calc(750px + (100% - 750px));
 }
-#background {
-  position: fixed;
+.topchik__inner {
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+    text-align: center;
+}
+.topchik__title {
+  margin: 0 0 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 65px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.1;
+}
+.topchik__subtitle {
+  font-size: 32px;
+  color: #fff;
+  line-height: 1.5;
+  font-weight: 400;
+}
+/* BTN */
+.btn {
+  font-size: 15px;
+  vertical-align: top;
+  padding: 14px 40px;
+  border-radius: 2px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Montserrat;
+  border: 0;
+  cursor: pointer;
+}
+.btn__ortyr {
+  background-color: #e705cd;
+  transition-duration: .4s;
+}
+.btn__ortyr:hover {
+    background-color: rgb(103,11, 92);
+}
+/* FOOTER */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  height: 250px;
+}
+.footer__background {
   width: 100%;
-  height: 100%;
-  background-color: #FF00FF;
-  background: url('./topfon.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 250px;
+  background-image: url('./типа_футер.jpg');
   background-size: cover;
+  position: absolute;
+}
+.footer__background {
+  transition-duration: .2s;
+}
+.footer:hover .footer__background {
+  -webkit-filter: brightness(0.5);
+  filter: brightness(0.5);
+}
+.footer:hover .footer__container{
+  opacity: 1;
 }
 
-.footer {
-  
+.footer__container {
+  opacity: 0;
+  transition-duration: .2s;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+}
+.footer__item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 60%;
+  width: 250px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.footer__item__content {
+  color: #fff;
+  font-weight: 500;
+  font-size: 17px;
+  margin-bottom: 5px;
+  font-family: Montserrat;
+}
+.super_a {
+  color: #fff;
+  text-decoration: none;
+  transition-duration: .2s;
+}
+.super_a:hover{
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
 }
